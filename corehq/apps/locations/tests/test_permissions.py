@@ -22,7 +22,7 @@ from casexml.apps.case.tests.util import delete_all_xforms
 
 from ..views import LocationsListView, EditLocationView
 from ..permissions import can_edit_form_location
-from .util import LocationHierarchyTestCase, delete_all_locations
+from .util import LocationHierarchyTestCase
 
 
 class FormEditRestrictionsMixin(object):
@@ -105,7 +105,6 @@ class FormEditRestrictionsMixin(object):
     @classmethod
     def extra_teardown(cls):
         delete_all_users()
-        delete_all_locations()
         delete_all_xforms()
 
     def assertCanEdit(self, user, form):
