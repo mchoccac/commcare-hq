@@ -3,11 +3,16 @@
     <div class="modal fade graph-config">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-body">
+                <!--div class="modal-body">
                     here is some stuff
                     this graph is a <span data-bind="text: selectedGraphType"></span>
-                </div>
-                <!--div class="modal-header">
+                    and it is named <span data-bind="text: graphDisplayName"></span>
+                            <select id="graphType" class="form-control" data-bind="
+                                options: availableGraphTypes,
+                                value: selectedGraphType
+                            "></select>
+                </div-->
+                <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -26,7 +31,7 @@
                         </div>
                       </div>
                     </form>
-                    <div data-bind="bootstrapTabs: true">
+                    <!--div data-bind="bootstrapTabs: true">
                         <div class="tabbable">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a>{% trans "Series" %}</a></li>
@@ -201,12 +206,12 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div-->
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal">Cancel</button>
                     <button class="btn btn-primary" data-dismiss="modal" data-bind="click: onSave">Save</button>
-                </div-->
+                </div>
             </div>
         </div>
     </div>
@@ -219,7 +224,7 @@
                 .ui-front makes jQuery UI attach the dropdown to this element rather than the body,
                 which is necessary because this is inside of a modal.
             -->
-            <div class="col-sm-3 ui-front">
+            <!--div class="col-sm-3 ui-front">
                 <input type="text" class="form-control" placeholder="property"
                        data-bind="autocompleteSelect2: $parent.configPropertyOptions, value: property">
             </div>
@@ -234,7 +239,7 @@
                 <a class="btn btn-sm btn-danger" href="#" data-bind="click: $parent.removeConfigPair">
                     <i class="fa fa-remove"></i>
                 </a>
-            </div>
+            </div-->
         </div>
     </div>
 </div>
