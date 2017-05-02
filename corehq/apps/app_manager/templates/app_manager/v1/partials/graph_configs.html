@@ -1,8 +1,13 @@
 {% load i18n %}
 
 <div data-bind="foreach: { data: graphConfig.currentCharts, as: 'chart' }">
+    <div data-bind="jlsBinding: report.graphConfig.getCurrentGraphConfig(chart.chart_id)">
+        <!-- ko stopBinding: true -->
+            <div class="guts"></div>
+        <!-- /ko -->
+    </div>
 
-    <h4>
+    <!--h4>
         {% trans 'Chart' %}: <span data-bind="text: chart.title"></span>
     </h4>
 
@@ -68,5 +73,5 @@
             </button>
         </fieldset>
     </div>
-    <div data-bind="event: {onload: report.graphConfig.addSubscribersToSaveButton()}"></div>
+    <div data-bind="event: {onload: report.graphConfig.addSubscribersToSaveButton()}"></div-->
 </div>

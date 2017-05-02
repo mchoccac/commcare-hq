@@ -425,3 +425,20 @@ hqDefine('app_manager/js/report-module.js', function () {
         select2Separator: select2Separator
     };
 });
+
+ko.bindingHandlers.jlsBinding = {
+    init: function (element, valueAccessor) {
+        var observableValue = valueAccessor();
+        var GraphConfigurationUiElement = hqImport('app_manager/js/graph-config.js').GraphConfigurationUiElement;
+        var graph_el = new GraphConfigurationUiElement({
+            //childCaseTypes: this.screen.childCaseTypes,
+            //fixtures: this.screen.fixtures,
+            //lang: this.lang,
+            //langs: this.screen.langs,
+            //name: this.header.val()
+        }, {
+            'graph_type': observableValue.graph_type(),
+        });
+        $(element).find(".guts").replaceWith(graph_el.ui);
+    },
+};

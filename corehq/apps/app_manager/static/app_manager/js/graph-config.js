@@ -146,9 +146,9 @@ hqDefine('app_manager/js/graph-config.js', function () {
             serverGraphObject = serverGraphObject || {};
             var ret = {};
 
-            ret.graphDisplayName = serverRepresentationOfGraph.graph_name;
+            //ret.graphDisplayName = serverRepresentationOfGraph.graph_name;
             ret.selectedGraphType = serverGraphObject.graph_type;
-            ret.series = _.map(serverGraphObject.series, function(s){
+            /*ret.series = _.map(serverGraphObject.series, function(s){
                 var series = {};
 
                 series.selectedSource = {'text':'custom', 'value':'custom'};
@@ -197,7 +197,7 @@ hqDefine('app_manager/js/graph-config.js', function () {
                 };
             });
             ret.childCaseTypes = moduleOptions.childCaseTypes;
-            ret.fixtures = moduleOptions.fixtures;
+            ret.fixtures = moduleOptions.fixtures;*/
 
             return ret;
         }
@@ -374,9 +374,9 @@ hqDefine('app_manager/js/graph-config.js', function () {
         });
 
         self.populate = function(obj){
-            self.graphDisplayName(obj.graphDisplayName);
+            //self.graphDisplayName(obj.graphDisplayName);
             self.selectedGraphType(obj.selectedGraphType);
-            self.series(_.map(obj.series, function(o){
+            /*self.series(_.map(obj.series, function(o){
                 return new (self.getSeriesConstructor())(o, self.childCaseTypes, self.fixtures, self.lang, self.langs);
             }));
             self.annotations(_.map(obj.annotations, function(o){
@@ -400,7 +400,7 @@ hqDefine('app_manager/js/graph-config.js', function () {
             }));
 
             self.childCaseTypes = obj.childCaseTypes.slice(0);
-            self.fixtures = obj.fixtures.slice(0);
+            self.fixtures = obj.fixtures.slice(0);*/
         };
 
         self.removeSeries = function (series){
